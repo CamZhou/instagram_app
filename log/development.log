@@ -221,3 +221,62 @@ Completed 200 OK in 6556ms (Views: 6544.1ms | ActiveRecord: 0.0ms)
 Completed 200 OK in 5699ms (Views: 5697.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-02-06 21:18:43 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 323ms (Views: 309.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-06 21:18:45 -0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-06 21:18:47 -0800
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 68ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-06 21:23:35 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 508ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_user_register_path' for #<#<Class:0x007f9325e2bd18>:0x007f9325e19a28>
+Did you mean?  new_user_registration_path
+               new_user_session_path):
+    36:                     <%= link_to "Log In", new_user_session_path %>
+    37:                     </li>
+    38:                     <li>
+    39:                     <%= link_to "Register", new_user_register_path %>
+    40:                     </li>
+    41:                     <% end %>
+    42:                    <!--  <li>
+  
+app/views/layouts/application.html.erb:39:in `_app_views_layouts_application_html_erb__662008317491748118_70134985951680'
+  Rendering /Users/FernandoWang/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/FernandoWang/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/FernandoWang/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.2ms)
+  Rendering /Users/FernandoWang/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/FernandoWang/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendering /Users/FernandoWang/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/FernandoWang/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/FernandoWang/.rvm/gems/ruby-2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (86.2ms)
+Started GET "/" for 127.0.0.1 at 2017-02-06 21:24:04 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 314ms (Views: 301.2ms | ActiveRecord: 0.0ms)
+
+

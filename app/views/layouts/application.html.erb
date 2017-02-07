@@ -20,20 +20,31 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+<!--                 <a class="navbar-brand" href="#">Start Bootstrap</a> -->
+                <%= link_to "Instagram", root_url, class:"navbar-brand"%>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <!-- <a href="#">About</a> -->
+                        <%= link_to "New Post", new_post_path %>
+                    </li>
+                    <%- if current_user %>
+                    <% else %>
+                    <li>
+                    <%= link_to "Log In", new_user_session_path %>
                     </li>
                     <li>
+                    <%= link_to "Register", new_user_registration_path %>
+                    </li>
+                    <% end %>
+                   <!--  <li>
                         <a href="#">Services</a>
                     </li>
                     <li>
                         <a href="#">Contact</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
