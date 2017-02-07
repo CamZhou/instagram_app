@@ -1483,3 +1483,44 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-02-06 22:41:51 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 4170ms (Views: 4159.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-02-06 22:42:06 -0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (71.3ms)
+Completed 200 OK in 134ms (Views: 121.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-02-06 22:42:17 -0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"O3GkRq0c9kujrhVg6A7lXtQoyOHKL6UwILk3eW2q4BTRwimy+CzHw5vZ8hoNoyFTM1HnkpdTaYYbRXS+IqVGkA==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007ffc499905f0 @tempfile=#<Tempfile:/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/RackMultipart20170206-65926-517ywn.png>, @original_filename="Simulator Screen Shot Sep 25, 2016, 3.02.15 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"Simulator Screen Shot Sep 25, 2016, 3.02.15 PM.png\"\r\nContent-Type: image/png\r\n">, "description"=>"Lol"}, "commit"=>"Create Post"}
+Command :: PATH=opt/ImageMagick/bin:$PATH; file -b --mime '/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/52556a0601388a1bb3263e7968e0e95620170206-65926-6ih9x2.png'
+Command :: PATH=opt/ImageMagick/bin:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/92e68d0a5e875cd817af6ae10e71975820170206-65926-1y3sxv.png[0]' 2>/dev/null
+Command :: PATH=opt/ImageMagick/bin:$PATH; identify -format %m '/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/92e68d0a5e875cd817af6ae10e71975820170206-65926-1y3sxv.png[0]'
+Command :: PATH=opt/ImageMagick/bin:$PATH; convert '/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/92e68d0a5e875cd817af6ae10e71975820170206-65926-1y3sxv.png[0]' -auto-orient -resize "500x500>" '/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/d2327ce47aaaded7b5f839b7f333ab0520170206-65926-1jkdr4y'
+Command :: PATH=opt/ImageMagick/bin:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/92e68d0a5e875cd817af6ae10e71975820170206-65926-1y3sxv.png[0]' 2>/dev/null
+Command :: PATH=opt/ImageMagick/bin:$PATH; identify -format %m '/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/92e68d0a5e875cd817af6ae10e71975820170206-65926-1y3sxv.png[0]'
+Command :: PATH=opt/ImageMagick/bin:$PATH; convert '/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/92e68d0a5e875cd817af6ae10e71975820170206-65926-1y3sxv.png[0]' -auto-orient -resize "100x100>" '/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/d2327ce47aaaded7b5f839b7f333ab0520170206-65926-1qh972o'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: PATH=opt/ImageMagick/bin:$PATH; file -b --mime '/var/folders/ly/73xljypd2yq_70rbt4057gqmgrwgpf/T/52556a0601388a1bb3263e7968e0e95620170206-65926-1hl6bor.png'
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "posts" ("description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "Lol"], ["created_at", 2017-02-07 06:42:18 UTC], ["updated_at", 2017-02-07 06:42:18 UTC], ["image_file_name", "Simulator_Screen_Shot_Sep_25__2016__3.02.15_PM.png"], ["image_content_type", "image/png"], ["image_file_size", 87707], ["image_updated_at", 2017-02-07 06:42:17 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 719ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2017-02-06 22:42:18 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 68ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
