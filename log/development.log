@@ -1524,3 +1524,66 @@ Processing by PostsController#show as HTML
 Completed 200 OK in 68ms (Views: 61.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-02-06 22:43:37 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2017-02-06 22:43:38 -0800
+Processing by PostsController#index as HTML
+Completed 200 OK in 306ms (Views: 293.7ms | ActiveRecord: 1.8ms)
+
+
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 52ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-02-06 22:43:40 -0800
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (16.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 90ms (Views: 70.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-02-06 22:43:49 -0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2E5RllQ9/ZGL0tKFsougdyHBQclTVNw0/PoZglzTQbn0tHv1ElnVTUuTgSSSFsOJyhL1gVhqPGXDHfsSSOeGAg==", "post"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x007fb19dea3e08 @tempfile=#<Tempfile:/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/RackMultipart20170206-9786-1g5cbx5.png>, @original_filename="ZIPCAR.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post[image]\"; filename=\"ZIPCAR.png\"\r\nContent-Type: image/png\r\n">, "description"=>"aaa"}, "commit"=>"Create Post"}
+Command :: PATH=opt/ImageMagick/bin:$PATH; file -b --mime '/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/9286f825a54783175e5be756661416b520170206-9786-1w2uenx.png'
+Command :: PATH=opt/ImageMagick/bin:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/9286f825a54783175e5be756661416b520170206-9786-ubj1o6.png[0]' 2>/dev/null
+Command :: PATH=opt/ImageMagick/bin:$PATH; identify -format %m '/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/9286f825a54783175e5be756661416b520170206-9786-ubj1o6.png[0]'
+Command :: PATH=opt/ImageMagick/bin:$PATH; convert '/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/9286f825a54783175e5be756661416b520170206-9786-ubj1o6.png[0]' -auto-orient -resize "500x500>" '/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/1b96eb779c31c804541b88f0af6e1d1020170206-9786-hnuimy'
+Command :: PATH=opt/ImageMagick/bin:$PATH; identify -format '%wx%h,%[exif:orientation]' '/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/9286f825a54783175e5be756661416b520170206-9786-ubj1o6.png[0]' 2>/dev/null
+Command :: PATH=opt/ImageMagick/bin:$PATH; identify -format %m '/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/9286f825a54783175e5be756661416b520170206-9786-ubj1o6.png[0]'
+Command :: PATH=opt/ImageMagick/bin:$PATH; convert '/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/9286f825a54783175e5be756661416b520170206-9786-ubj1o6.png[0]' -auto-orient -resize "100x100>" '/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/1b96eb779c31c804541b88f0af6e1d1020170206-9786-d5046r'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: PATH=opt/ImageMagick/bin:$PATH; file -b --mime '/var/folders/px/wq4ghj9j7nz_8t_w6jwrksmr0000gn/T/9286f825a54783175e5be756661416b520170206-9786-z72kx4.png'
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "posts" ("description", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["description", "aaa"], ["created_at", 2017-02-07 06:43:50 UTC], ["updated_at", 2017-02-07 06:43:50 UTC], ["image_file_name", "ZIPCAR.png"], ["image_content_type", "image/png"], ["image_file_size", 24321], ["image_updated_at", 2017-02-07 06:43:49 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 156ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2017-02-06 22:43:50 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2017-02-06 22:46:22 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 308ms (Views: 275.7ms | ActiveRecord: 1.3ms)
+
+
