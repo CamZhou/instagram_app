@@ -8,6 +8,6 @@ CamZhou's Instagram supports user system (register and login), and posts (send a
 
 * properly captioned screenshots of the main functionality you implemented (e.g., Register, Login/Logout, Adding a new post)
 
-!(./register.png)Register!
+!(/register.png)!
 
 * (extra credit) any other functionality or creative additions you included (e.g., Bootstrap); remember to cite your resources/references.
